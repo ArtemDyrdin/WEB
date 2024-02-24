@@ -2,4 +2,6 @@
 ### Local Docker
 
 1. Запуск __nginx__ веб-сервера
-   ![the nginx web server is successfully installed and working](https://drive.google.com/file/d/15pw6c6-IFvKcEnCiT_kUSi26Rc7qv9TY/view?usp=drive_link)
+   ![the nginx web server is successfully installed and working](https://github.com/ArtemDyrdin/WEB/blob/main/lab_1/res/web1.jpg)
+2. Определяем индекс по умолчанию и имя сервера
+   ![http://php-docker.local:8080/](https://github.com/ArtemDyrdin/WEB/blob/main/lab_1/res/web2.jpg)

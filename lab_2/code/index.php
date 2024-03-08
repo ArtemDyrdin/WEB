@@ -12,3 +12,18 @@ $order .= '!!!';
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
+
+// 2. Числа
+echo "\n";
+
+$numberInt = 500;
+echo $numberInt;
+echo "\n";
+$numberFloat = 231.455;
+echo $numberFloat;
+echo "\n";
+echo 4+8;
+echo "\n";
+$last_month = 1187.23;
+$this_month = 1089.98;
+echo $last_month - $this_month;

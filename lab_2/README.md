@@ -1,1 +1,4 @@
 # Лабораторная работа №2
+
+__1) Доступ по ссылке__
+    ![res1](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/1.jpg)

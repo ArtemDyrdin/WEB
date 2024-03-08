@@ -41,3 +41,15 @@ echo $days_per_language;
 echo "\n";
 
 echo 8**2;
+
+// 13. Операторы присвоения
+echo "\n";
+
+$my_num = 230;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+echo $answer;

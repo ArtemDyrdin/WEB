@@ -15,3 +15,7 @@ __11) Умножение и деление__
 __12) Степень__
 
 ![res4](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/4.jpg)
+
+__13) Операторы присвоения__
+
+![res5](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/5.jpg)

@@ -120,7 +120,7 @@ echo $k, "\n";
 // 15. Функции
 echo "\n";
 
-function printStringReturnNumber()
+function printStringReturnNumber(): int
 {
  echo "printStringReturnNumber()\n";
  return 100500;
@@ -128,3 +128,51 @@ function printStringReturnNumber()
 
 $my_num = printStringReturnNumber();
 echo $my_num, "\n";
+
+// 16. Функции
+echo "\n";
+
+function increaseEnthusiasm(string $str): string
+{
+    return "$str!";
+}
+echo increaseEnthusiasm("привет"), "\n";
+
+function repeatThreeTimes(string $str): string
+{
+    return $str.$str.$str;
+}
+echo repeatThreeTimes("Absolute"), "\n";
+echo increaseEnthusiasm(repeatThreeTimes("Brake")), "\n";
+
+function cut(string &$str, int $length = 10)
+{
+    $str = substr($str, 0, $length);
+}
+$str1 = "1234567890";
+cut($str1, 3);
+
+$numbers7 = [1, 2, 3, 4];
+function rec_numbers(array $numbers) {
+    if (empty($numbers))
+        return;
+    echo $numbers[0];
+    rec_numbers(array_slice($numbers, 1));
+}
+rec_numbers($numbers7);
+echo "\n";
+
+function find_less_nine(int $number): int
+{
+    while ($number > 9) {
+        $sum = 0;
+        while ($number != 0) {
+            $digit = $number % 10;
+            $sum += $digit;
+            $number = (int)($number / 10);
+        }
+        $number = $sum;
+    }
+    return $number;
+}
+echo find_less_nine(987), "\n";

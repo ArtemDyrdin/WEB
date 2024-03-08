@@ -11,3 +11,7 @@ __2) Числа__
 __11) Умножение и деление__
 
 ![res3](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/3.jpg)
+
+__12) Степень__
+
+![res4](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/4.jpg)

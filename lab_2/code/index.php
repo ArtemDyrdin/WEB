@@ -28,7 +28,7 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 echo $last_month - $this_month;
 
-// Умножение и деление
+// 11. Умножение и деление
 echo "\n";
 
 $num_languages = 4;
@@ -36,3 +36,8 @@ $months = 11;
 $days = $months * 16;
 $days_per_language = $days / 4;
 echo $days_per_language;
+
+// 12. Степень
+echo "\n";
+
+echo 8**2;

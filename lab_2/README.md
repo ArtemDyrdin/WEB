@@ -2,9 +2,12 @@
 
 __1) Доступ по ссылке__
 
-    ![res1](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/1.jpg)
+![res1](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/1.jpg)
 
 __2) Числа__
 
-    ![res2](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/2.jpg)
+![res2](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/2.jpg)
 
+__11) Умножение и деление__
+
+![res3](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/3.jpg)

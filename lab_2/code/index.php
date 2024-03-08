@@ -116,3 +116,15 @@ while ($sum1 <= 10) {
     $k++;
 }
 echo $k, "\n";
+
+// 15. Функции
+echo "\n";
+
+function printStringReturnNumber()
+{
+ echo "printStringReturnNumber()\n";
+ return 100500;
+}
+
+$my_num = printStringReturnNumber();
+echo $my_num, "\n";

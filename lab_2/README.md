@@ -19,3 +19,7 @@ __12) Степень__
 __13) Операторы присвоения__
 
 ![res5](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/5.jpg)
+
+__14) Математические функции__
+
+![res6](https://github.com/ArtemDyrdin/WEB/blob/main/lab_2/res/6.jpg)

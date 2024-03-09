@@ -222,3 +222,45 @@ $arr = ['a', 'b', 'c', 'd', 'e'];
 echo count($arr), "\n";
 
 echo end($arr), prev($arr), "\n";
+
+// 18. Design of if-else
+echo "\n";
+
+function less_more(int $a, int $b): bool
+{
+    return $a+$b>10;
+}
+echo less_more(5, 6), "\n";
+
+function equal(int $a, int $b): bool
+{
+    return $a === $b;
+}
+echo equal(5, 5), "\n";
+
+$test = 0;
+if (!$test)
+    echo 'верно';
+
+echo "\n";
+
+$age = 99;
+if ($age < 10 or $age > 99)
+    echo "$age < 10 or $age > 99", "\n";
+else {
+    $sum = 0;
+    while ($age != 0) {
+        $digit = $age % 10;
+        $sum += $digit;
+        $age = (int)($age / 10);
+    }
+    if ($sum <= 9)
+        echo "сумма цифр однозначна ($sum)";
+    else
+        echo "сумма цифр двузначна ($sum)";
+    echo "\n";
+}
+
+$arr = [1, 2, 3];
+if (count($arr) === 3)
+    echo $arr[0] + $arr[1] + $arr[2], "\n";

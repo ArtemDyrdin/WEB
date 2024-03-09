@@ -223,7 +223,7 @@ echo count($arr), "\n";
 
 echo end($arr), prev($arr), "\n";
 
-// 18. Design of if-else
+// 18. Конструкция if else
 echo "\n";
 
 function less_more(int $a, int $b): bool
@@ -264,3 +264,14 @@ else {
 $arr = [1, 2, 3];
 if (count($arr) === 3)
     echo $arr[0] + $arr[1] + $arr[2], "\n";
+
+// 19. Циклы
+echo "\n";
+
+for ($i = 1; $i < 21; $i++) {
+    for ($j = 0; $j < $i; $j++)
+        echo 'x';
+    echo "\n";
+}
+
+

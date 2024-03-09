@@ -274,4 +274,57 @@ for ($i = 1; $i < 21; $i++) {
     echo "\n";
 }
 
+// 20. Комбинация функций
+echo "\n";
 
+$numbers = [1, 2, 3, 4, 5, 6, 7];
+function average($numbers, $index = 0, $sum = 0) {
+    if ($index == count($numbers))
+        return $sum / count($numbers);
+    else
+        return average($numbers, $index + 1, $sum + $numbers[$index]);
+}
+echo average($numbers), "\n";
+
+function sum($numbers, $index = 0, $sum = 0) {
+    if ($index == count($numbers))
+        return $sum;
+    else
+        return sum($numbers, $index + 1, $sum + $numbers[$index]);
+}
+echo sum($numbers), "\n";
+
+function make_sqrts($numbers, $index = 0) {
+    if ($index == count($numbers))
+        return [];
+    else {
+        $currentNumber = $numbers[$index];
+        $sqrt = sqrt($currentNumber);
+        $currentSqrts = make_sqrts($numbers, $index + 1);
+        array_unshift($currentSqrts, $sqrt);
+        return $currentSqrts;
+    }
+}
+echo make_sqrts($numbers)[1], "\n";
+
+function alphabetArray($currentLetter = 'a', $currentNumber = 1, $result = []) {
+    if ($currentLetter > 'z')
+        return $result;
+    else {
+        $result[$currentLetter] = $currentNumber;
+        return alphabetArray(chr(ord($currentLetter) + 1), $currentNumber + 1, $result);
+    }
+}
+echo alphabetArray()['c'], "\n";
+
+function sum_pairs($str) {
+    if (strlen($str) < 2) {
+        return 0;
+    } else {
+        $pair = intval(substr($str, 0, 2));
+        $rest = substr($str, 2);
+        return $pair + sum_pairs($rest);
+    }
+}
+$str = '1234567890';
+echo sum_pairs($str), "\n";

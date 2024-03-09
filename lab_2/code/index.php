@@ -176,3 +176,49 @@ function find_less_nine(int $number): int
     return $number;
 }
 echo find_less_nine(987), "\n";
+
+// 17. Массивы
+$numbers8 = ['x', 'xx', 'xxx', 'xxxx'];
+function arrayFill(string $word, int $count)
+{
+    $nums = array();
+    for ($i = 0; $i < $count; $i++)
+        $nums[$i] = $word;
+    echo $nums[$count-1], "\n";
+}
+arrayFill('x', 5);
+
+$numbersX2 = [[1, 2, 3], [4, 5], [6]];
+$sum2 = 0;
+foreach ($numbersX2 as $numbersX1)
+    foreach ($numbersX1 as $el)
+        $sum2 += $el;
+echo $sum2, "\n";
+
+$numbersX2_2 = array();
+$numbersX1_2 = array();
+for ($i = 1; $i < 10; $i++) {
+    if ($i % 3 !== 0)
+        $numbersX1_2[] = $i;
+    else {
+        $numbersX1_2[] = $i;
+        $numbersX2_2[] = $numbersX1_2;
+        $numbersX1_2 = [];
+    }
+}
+echo $numbersX2_2[2][1], "\n";
+
+$numbers9 = [2, 5, 3, 9];
+$result = $numbers9[0]*$numbers9[1] + $numbers9[2]*$numbers9[3];
+echo $result, "\n";
+
+$user = ['name' => 'Artem', 'surname' => 'Dyrdin', 'patronymic' => 'Yurevich'];
+echo "{$user['surname']} {$user['name']} {$user['patronymic']}\n";
+
+$date = ['year' => 2024, 'month' => 3, 'day' => 9];
+echo "{$date['year']}-{$date['month']}-{$date['day']}\n";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo count($arr), "\n";
+
+echo end($arr), prev($arr), "\n";

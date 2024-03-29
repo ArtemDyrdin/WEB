@@ -2,6 +2,7 @@
 
 __1) Регулярные выражения__
 
+![res1](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/1.jpg)
 
 __2) Форма. Сессии и Куки__
 

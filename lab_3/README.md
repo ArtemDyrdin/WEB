@@ -2,9 +2,12 @@
 
 __1) Регулярные выражения__
 
+
 ![res1](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/1.png)
 
+
 __2) Форма. Сессии и Куки__
+
 
 ![res2](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/2.png)
 ---
@@ -18,4 +21,10 @@ __2) Форма. Сессии и Куки__
 ---
 ![res7](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/7.png)
 
+
 __3) Файлы__
+
+
+![res8](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/8.png)
+---
+![res9](https://github.com/ArtemDyrdin/WEB/blob/main/lab_3/res/9.png)

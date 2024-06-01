@@ -2,53 +2,49 @@
 
 use JetBrains\PhpStorm\NoReturn;
 
-#[NoReturn] function redirectToHome():void
+#[NoReturn] function redirectToHome(): void
 {
-    header('Location:index3.php');
+    header('Location:index.php');
     exit();
 }
 
-/**
- * @return void
- * @throws \Google\Service\Exception
- */
-function extracted(): void
-{
-    ob_start();
-
-    if (false === isset($_POST['email'], $_POST['category'], $_POST['name'], $_POST['description'])) {
-        redirectToHome();
-    }
-
-    $category = $_POST['category'];
-    $name = $_POST['name'];
-    $desc = $_POST['description'];
-    $email = $_POST['email'];
-
-    require __DIR__ . '/vendor/autoload.php';
-    $client = new \Google_Client();
-    $client->setApplicationName('Google Pets');
-    $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
-    $client->setAccessType('offline');
-    try {
-        $client->setAuthConfig(__DIR__ . '/web-lab4-422218-8443dcf946dc.json');
-    } catch (\Google\Exception $e) {
-        echo "Ошибка!\n";
-    }
-    $service = new Google_Service_Sheets($client);
-    $sheetID = "1ZTkKfrTr_3vXl5Y6V9SM7DyPjfdoiVpYZJfPaZiJx0M";
-
-    $range = "Products";
-    $values = [[$category, $name, $email, $desc],];
-    $body = new Google_Service_Sheets_ValueRange(['values' => $values]);
-    $row = sizeof(($service->spreadsheets_values->get($sheetID, $range))->getValues()) + 1;
-    $params = ['valueInputOption' => 'RAW'];
-    try {
-        $service->spreadsheets_values->update($sheetID, 'Products!A' . ($row), $body, $params);
-    } catch (\Google\Service\Exception $e) {
-        echo "Ошибка!!";
-    }
+if (false === isset($_POST['email'], $_POST['category'], $_POST['name'], $_POST['description'])) {
     redirectToHome();
 }
 
-extracted();
+$category = $_POST['category'];
+$name = $_POST['name'];
+$desc = $_POST['description'];
+$email = $_POST['email'];
+
+// Подключение к базе данных
+$mysqli = new mysqli('db', 'root', '1234', 'web');
+if ($mysqli->connect_errno) {
+    printf("Подключение к серверу MySQL невозможно, код ошибки: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+// Экранирование данных для предотвращения SQL-инъекций
+$category = $mysqli->real_escape_string($category);
+$name = $mysqli->real_escape_string($name);
+$desc = $mysqli->real_escape_string($desc);
+$email = $mysqli->real_escape_string($email);
+
+// Вставка данных в таблицу
+$query = "INSERT INTO ad (email, title, description, category) VALUES ('$email', '$name', '$desc', '$category')";
+$mysqli->query($query);
+
+// Получение всех данных из таблицы
+$result = $mysqli->query('SELECT * FROM ad');
+$data = [];
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
+}
+
+// Закрытие соединения с базой данных
+$mysqli->close();
+
+redirectToHome();
+
